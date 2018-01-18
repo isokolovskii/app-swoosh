@@ -123,7 +123,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA4-a2-fh6" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA4-a2-fh6" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="16" y="597" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -150,10 +150,13 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLeagueOptionTapped:" destination="Nz4-Jw-BD7" eventType="touchUpInside" id="5eT-oU-pZL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-oT-LO4" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="343" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6By-pr-exJ"/>
                                         </constraints>
@@ -161,6 +164,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLeagueOptionTapped:" destination="Nz4-Jw-BD7" eventType="touchUpInside" id="kAi-c1-w0o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1I-Yz-qOa" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="343" height="50"/>
@@ -172,6 +178,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLeagueOptionTapped:" destination="Nz4-Jw-BD7" eventType="touchUpInside" id="dxa-hD-fqw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -207,6 +216,10 @@
                         <viewLayoutGuide key="safeArea" id="MlA-gh-otA"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="JA4-a2-fh6" id="514-WY-OOc"/>
+                        <outletCollection property="btns" destination="aW9-oT-LO4" collectionClass="NSMutableArray" id="T1v-xu-cMt"/>
+                        <outletCollection property="btns" destination="yWb-Bo-iz8" collectionClass="NSMutableArray" id="VpK-WH-oLe"/>
+                        <outletCollection property="btns" destination="U1I-Yz-qOa" collectionClass="NSMutableArray" id="F4w-zy-qFe"/>
                         <segue destination="023-Cj-xij" kind="show" identifier="skillVCSegue" id="xxO-ME-kZb"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C298A95E2010BA7A001E6747 /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298A95D2010BA7A001E6747 /* LeagueVC.swift */; };
 		C298A9602010BA89001E6747 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298A95F2010BA89001E6747 /* SkillVC.swift */; };
+		C298A9622010DBB2001E6747 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298A9612010DBB2001E6747 /* Player.swift */; };
+		C298A9652010DE95001E6747 /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298A9642010DE95001E6747 /* Leagues.swift */; };
+		C298A9672010DFF5001E6747 /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = C298A9662010DFF5001E6747 /* Skills.swift */; };
 		C2A77CB8200FD386003DF9CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A77CB7200FD386003DF9CE /* AppDelegate.swift */; };
 		C2A77CBA200FD386003DF9CE /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A77CB9200FD386003DF9CE /* WelcomeVC.swift */; };
 		C2A77CBD200FD386003DF9CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A77CBB200FD386003DF9CE /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		C298A95D2010BA7A001E6747 /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
 		C298A95F2010BA89001E6747 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
+		C298A9612010DBB2001E6747 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C298A9642010DE95001E6747 /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
+		C298A9662010DFF5001E6747 /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		C2A77CB4200FD386003DF9CE /* app-swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-swoosh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A77CB7200FD386003DF9CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A77CB9200FD386003DF9CE /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -54,8 +60,18 @@
 		C298A95C2010B9F9001E6747 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C298A9612010DBB2001E6747 /* Player.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C298A9632010DE86001E6747 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C298A9642010DE95001E6747 /* Leagues.swift */,
+				C298A9662010DFF5001E6747 /* Skills.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		C2A77CAB200FD385003DF9CE = {
@@ -77,6 +93,7 @@
 		C2A77CB6200FD386003DF9CE /* app-swoosh */ = {
 			isa = PBXGroup;
 			children = (
+				C298A9632010DE86001E6747 /* Enums */,
 				C298A95C2010B9F9001E6747 /* Model */,
 				C298A95B2010B9EC001E6747 /* Controller */,
 				C2A77CC9200FDBC1003DF9CE /* Views */,
@@ -170,9 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A77CBA200FD386003DF9CE /* WelcomeVC.swift in Sources */,
+				C298A9672010DFF5001E6747 /* Skills.swift in Sources */,
 				C298A95E2010BA7A001E6747 /* LeagueVC.swift in Sources */,
 				C2A77CB8200FD386003DF9CE /* AppDelegate.swift in Sources */,
+				C298A9652010DE95001E6747 /* Leagues.swift in Sources */,
 				C298A9602010BA89001E6747 /* SkillVC.swift in Sources */,
+				C298A9622010DBB2001E6747 /* Player.swift in Sources */,
 				C2A77CCB200FDBE5003DF9CE /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

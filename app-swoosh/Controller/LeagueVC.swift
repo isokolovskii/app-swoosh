@@ -9,11 +9,15 @@
 import UIKit
 
 class LeagueVC: UIViewController {
-
+    var player: Player!
+    
+    @IBOutlet weak var nextBtn: BorderButton!
+    @IBOutlet var btns: [BorderButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        player = Player()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +29,32 @@ class LeagueVC: UIViewController {
         performSegue(withIdentifier: "skillVCSegue", sender: self)
     }
     
-    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
+    @IBAction func onLeagueOptionTapped(_ sender: Any) {
+        guard let sender = sender as? UIButton else {
+            return
+        }
+        guard let btnText = sender.titleLabel?.text else {
+            return
+        }
         
+        switch btnText {
+        case "Mens":
+            player.desiredLeague = Leagues.mens
+        case "Womens":
+            player.desiredLeague = Leagues.womens
+        case "Co-ed":
+            player.desiredLeague = Leagues.coed
+        default:
+            return
+        }
+        
+        btns.forEach { (btn: BorderButton) in
+            btn.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3949325771)
+        }
+        sender.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        nextBtn.isEnabled = true
     }
-
+    
     /*
     // MARK: - Navigation
 
