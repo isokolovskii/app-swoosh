@@ -36,8 +36,11 @@ class LeagueVC: UIViewController {
         guard let btnText = sender.titleLabel?.text else {
             return
         }
-        
-        switch btnText {
+        selectedLeague(leagueName: btnText)
+    }
+    
+    func selectedLeague(leagueName: String) {
+        switch leagueName {
         case "Mens":
             player.desiredLeague = Leagues.mens
         case "Womens":
@@ -47,11 +50,13 @@ class LeagueVC: UIViewController {
         default:
             return
         }
-        
+                
         btns.forEach { (btn: BorderButton) in
             btn.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3949325771)
+            if btn.titleLabel?.text == leagueName {
+                btn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            }
         }
-        sender.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         nextBtn.isEnabled = true
     }
     
