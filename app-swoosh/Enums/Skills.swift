@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Skills: String {
+enum SkillLevels: String {
     case beginner = "begginer"
     case baller = "baller"
 }
