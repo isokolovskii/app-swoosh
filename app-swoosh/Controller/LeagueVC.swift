@@ -21,6 +21,10 @@ class LeagueVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onNextTapped(_ sender: Any) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
     @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
         
     }
